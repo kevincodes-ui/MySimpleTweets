@@ -4,6 +4,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Toast;
 
 import com.codepath.apps.restclienttemplate.models.SampleModel;
 import com.codepath.apps.restclienttemplate.models.SampleModelDao;
@@ -31,6 +32,11 @@ public class LoginActivity extends OAuthLoginActionBarActivity<TwitterClient> {
 		});
 	}
 
+	// Fires a Toast
+	private void showMessage(String message){
+		Toast.makeText(this,message, Toast.LENGTH_LONG).show();
+	}
+
 
 	// Inflate the menu; this adds items to the action bar if it is present.
 	@Override
@@ -43,6 +49,7 @@ public class LoginActivity extends OAuthLoginActionBarActivity<TwitterClient> {
 	// i.e Display application "homepage"
 	@Override
 	public void onLoginSuccess() {
+		showMessage("Success !");
 		// Intent i = new Intent(this, PhotosActivity.class);
 		// startActivity(i);
 	}

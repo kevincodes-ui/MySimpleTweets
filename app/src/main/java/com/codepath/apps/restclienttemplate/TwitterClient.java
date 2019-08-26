@@ -6,6 +6,7 @@ import com.codepath.asynchttpclient.RequestParams;
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler;
 import com.codepath.oauth.OAuthBaseClient;
 import com.github.scribejava.apis.FlickrApi;
+import com.github.scribejava.apis.TwitterApi;
 import com.github.scribejava.core.builder.api.BaseApi;
 
 /*
@@ -21,10 +22,10 @@ import com.github.scribejava.core.builder.api.BaseApi;
  * 
  */
 public class TwitterClient extends OAuthBaseClient {
-	public static final BaseApi REST_API_INSTANCE = FlickrApi.instance(FlickrApi.FlickrPerm.WRITE); // Change this
-	public static final String REST_URL = "https://api.flickr.com/services"; // Change this, base API URL
-	public static final String REST_CONSUMER_KEY = "SOME_KEY";       // Change this
-	public static final String REST_CONSUMER_SECRET = "SOME_SECRET"; // Change this
+	public static final BaseApi REST_API_INSTANCE = TwitterApi.instance(); // Changed
+	public static final String REST_URL = "https://api.twitter.com/1.1"; // Changed this, base API URL
+	public static final String REST_CONSUMER_KEY = "VxDtt7xrD3n3PTji3VDrYWJVv";       // Changed this
+	public static final String REST_CONSUMER_SECRET = "ZWT5Qr0a5QD340J8yCbzFl2Cg6wK3Q3bKK7svu6zlugQG4hNYo"; // Changed this
 
 	// Landing page to indicate the OAuth flow worked in case Chrome for Android 25+ blocks navigation back to the app.
 	public static final String FALLBACK_URL = "https://codepath.github.io/android-rest-client-template/success.html";
